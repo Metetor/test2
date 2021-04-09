@@ -1,0 +1,23 @@
+//一个0和1组成的字符串，分割成两个奇数字符串（n为偶数时，奇数输出0）
+//中心字符串不同；找出分法个数
+#include<iostream>
+#include<string>
+#include<cstring>
+using namespace std;
+int main()
+{
+	string num;
+	cin>>num;
+	int sum=0;
+	int len=num.length();
+	if (len%2!=0)
+	{cout<<0;
+	return 0;}
+	else {
+	for(int i=1;i<len;i+=2)
+	{if (num[(i-1)/2]!=num[(len-1+i)/2])
+	{sum++;}}
+	}
+	cout<<sum;
+	return 0;
+}
